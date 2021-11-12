@@ -1,0 +1,1 @@
+//al usar switch se hace una comparacion estricta que es === donde se revisa el valor y el tipo
