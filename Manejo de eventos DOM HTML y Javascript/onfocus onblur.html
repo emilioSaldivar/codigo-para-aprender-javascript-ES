@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo de eventos DOM HTML</h1>
+    <br/>
+    Nombre: <input type="text" onfocus="convertir(this)" onblur="regresar(this)"/> <!-- onfocus hace referencia a el cambio de color del fondo del campo cuando nos encontramos dentro del campo -->
+    <br/>
+    <br/>
+    Apellido: <input type="text" onfocus="convertir(this)" onblur="regresar(this)"/> <!-- onblur hace referencia a el cambio de color del fondo del campo cuando nos encontramos fuera del campo -->
+    <script>
+        function convertir( puntero ){
+            puntero.style.background = "yellow";
+        }
+        function regresar( puntero ){
+            puntero.style.background = "red";
+        }
+    </script>
+</body>
+</html>

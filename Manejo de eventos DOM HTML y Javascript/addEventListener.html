@@ -1,0 +1,30 @@
+</head>
+<body>
+    <h1 id="titulo">Manejo de eventos DOM HTML</h1>
+    <br/>
+    Nombre: <input type="text" id='nombre'/>
+    <br/>
+    <br/>
+    Apellido: <input type="text" id="apellido"/>
+    <script>
+        // ejemplo ccon funciones flecha
+        document.getElementById('nombre').addEventListener('focus', (evento) => {
+            evento.target.style.background = 'pink';
+        });// escucha el evento hasta que ocurra
+        document.getElementById('nombre').addEventListener('blur', (evento) => {
+            evento.target.style.background = 'blue';
+        });// escucha el evento hasta que ocurra
+
+        // ejemplo con funciones clasicas
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+        function cambiar( evento ){ // recibe como parametro el evento y por medio de target obtenemos la referencia del componente del documento a ser modificado
+            let componente = evento.target;// se pude intermediar con una variable o utilidar evento.target.<alguna otra propiedad del documento>
+            componente.style.background = 'yellow';
+        }
+        function regresar( evento ){
+            evento.target.style.background = 'white'
+        }
+    </script>
+</body>
+</html>

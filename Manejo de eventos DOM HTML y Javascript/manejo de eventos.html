@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos</title>
+</head>
+<body>
+    <h1 onclick="cambiarTexto(this)">Manejo de eventos DOM HTML</h1> <!-- con un clic se modifica el texto del titulo se envia como argumento la referencia-->
+    <br/>
+    <script>
+        function cambiarTexto( puntero ){// se crea una funcion que recibe como "puntero" el elemento a ser alterado
+            puntero.innerHTML = "cambiar titulo";// se modifica el elemento
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de DOM</title>
+</head>
+<body>
+    <h1>Creacion del DOM</h1>
+    <p>Saludos!</p>
+    <p>Otro parrafo</p>
+<!-- codigo de js-->
+    <script>
+        let parrafos = document.getElementsByTagName("p");
+        console.log(`Cantidad de arrafos: ${parrafos.length}`);
+        for( let i=0; i<parrafos.length ; i++){
+            console.log( `i: ${i} ${parrafos[i].innerHTML}`)
+        }
+    </script>
+</body>
+</html>

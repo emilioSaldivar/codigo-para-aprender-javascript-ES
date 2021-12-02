@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos</title>
+</head>
+<body onload="entrar()">
+    <h1 id="titulo" >Manejo de eventos DOM HTML</h1> <!-- con un clic se modifica el texto del titulo se envia como argumento la referencia-->
+    <br/>
+    <div id="mostrar">
+        <!-- aca va el nuevo contenido luego de hacer click en el titulo-->
+    </div>
+    <script>
+        document.getElementById('titulo').onclick= cambiarTexto;// se recupera el titulo y se espera a un evento click
+        function cambiarTexto(){
+            document.getElementById('mostrar').innerHTML = 'contenido'; // se recupera el contentenido del div y se modifica el contenido
+        }
+        function entrar(){ // al cargar la pagina se llama a la funcion
+            alert('ingresando a la pagina web');// se hace una alerta al usuario que la pagina se esta cargando
+            // se verifica y se muestra en la pagina si las cookies estan habilitadas.
+            let texto = '';
+            if ( navigator.cookieEnabled ){
+                texto = ' cookies estan habilitadas ';
+            }
+            else{
+                texto = ' cookies estan inhabilitadas';
+            }
+            document.getElementById('mostrar').innerHTML = texto;// se recupera el div del documento html y se muestra la informacion captada en texto
+        }
+    </script>
+</body>
+</html>

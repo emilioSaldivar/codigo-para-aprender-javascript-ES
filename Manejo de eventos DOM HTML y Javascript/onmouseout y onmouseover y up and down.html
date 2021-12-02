@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos</title>
+</head>
+<body>
+    <h1 id="titulo" onmouseup="rojo(this)" onmouseout="azul(this)">Manejo de eventos DOM HTML</h1> <!-- con un clic se modifica el color del titulo al ubicar el puntero y sacar  el puntero -->
+    <br/>
+    <!-- con out y over acciona al ubicar el puntero sobre el elemneto o al quitarlo, y con up y down es al hacer o dejar de hacer click sobre el elemento-->
+    <div onmouseout="modificador(this, false)" onmouseover=" modificador(this, true)">
+        <!-- algo para modificar -->
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quibusdam fuga, iure unde impedit ducimus architecto placeat, exercitationem in ea molestias, velit voluptatibus perferendis quisquam veniam beatae doloremque tempora eaque!</p>
+    </div>
+    Nombre: <input type="text" onchange="convertir(this)"/>
+    <script>
+        function rojo( puntero ){
+            puntero.style.color = 'red';
+        }
+        function azul( puntero ){
+            puntero.style.color = 'blue';
+        }
+        function modificador( puntero, bandera ){
+            if (bandera) {
+                puntero.style.color = 'blue';
+            }
+            else{
+                puntero.style.color = 'red'
+                puntero.innerHTML = puntero.innerHTML.toUpperCase();
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejempl</title>
+    <title>Creacion de DOM</title>
 </head>
 <body>
-    
+    <h1 id="cabecero">Creacion de DOM</h1>
+    <p id="parrafo">Saludos!</p>
+<!-- codigo de js-->
+    <script>
+        console.log("Saludos desde javascript");
+        let cabecero = document.getElementById("cabecero");
+        console.log(cabecero.innerHTML);
+        let parrafo = document.getElementById("parrafo");
+        console.log(parrafo.innerHTML);
+    </script>
 </body>
 </html>

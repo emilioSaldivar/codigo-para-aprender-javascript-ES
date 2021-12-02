@@ -1,0 +1,26 @@
+</head>
+<body>
+    <h1 id="titulo">Manejo de eventos DOM HTML</h1>
+    <br/>
+    <form id="formulario">
+        Nombre: <input type="text" id='nombre'/>
+        <br/>
+        <br/>
+        Apellido: <input type="text" id="apellido"/>
+    </form>
+    <script>
+        // recuperamos el formulario y lo guardamos en una variable
+        let formulario = document.getElementById('formulario');
+        // ejemplo ccon funciones flecha
+        formulario.addEventListener('focus', (evento) => {
+            evento.target.style.background = 'pink';
+        }, true);// escucha el evento hasta que ocurra
+        formulario.addEventListener('blur', (evento) => {
+            evento.target.style.background = 'yellow';
+        }, true);// escucha el evento hasta que ocurra
+        // obs: dado que el elemento del documento recuperado tiene mas elemnetos internos para que
+        // addEventListener se propague a elementos mas internos es necesario agregar un tercer parametro que indique que
+        // queremos que se aplique a elementos mas internos del componente
+    </script>
+</body>
+</html>

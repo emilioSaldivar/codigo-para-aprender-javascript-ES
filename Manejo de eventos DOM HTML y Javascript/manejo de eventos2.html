@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos</title>
+</head>
+<body>
+    <h1 id="titulo" >Manejo de eventos DOM HTML</h1> <!-- con un clic se modifica el texto del titulo se envia como argumento la referencia-->
+    <br/>
+    <div id="mostrar">
+        <!-- aca va el nuevo contenido luego de hacer click en el titulo-->
+    </div>
+    <script>
+        document.getElementById('titulo').onclick= cambiarTexto;// se recupera el titulo y se espera a un evento click
+        function cambiarTexto(){
+            document.getElementById('mostrar').innerHTML = 'contenido'; // se recupera el contentenido del div y se modifica el contenido
+        }
+    </script>
+</body>
+</html>
